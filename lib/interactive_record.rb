@@ -55,7 +55,6 @@ class InteractiveRecord
   end
 
   def self.find_by(attr)
-    binding.pry
     arr = attr.flatten
     col = arr[0].to_s
     val = arr[1]
