@@ -58,6 +58,7 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
     col = attr.keys.join
     val = attr.values.join
+    binding.pry
     DB[:conn].execute(sql, col, val)
   end
 
