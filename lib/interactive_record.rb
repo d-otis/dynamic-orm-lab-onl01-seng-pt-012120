@@ -57,7 +57,6 @@ class InteractiveRecord
   def self.find_by(attr)
     col = attr.keys.join
     val = attr.values.join
-    binding.pry
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{col} = '#{val}'")
   end
 
