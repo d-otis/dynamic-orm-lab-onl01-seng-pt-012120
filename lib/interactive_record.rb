@@ -57,7 +57,7 @@ class InteractiveRecord
   def self.find_by(attr)
     binding.pry
     attr.collect do |k, v|
-      
+      binding.pry
     end
     col = attr.keys.join
     val = attr.values.join
