@@ -57,6 +57,8 @@ class InteractiveRecord
   def self.find_by(attr)
     binding.pry
     arr = attr.flatten
+    col = arr[0].to_s
+    val = arr[1]
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{col} = '#{val}'")
   end
 
